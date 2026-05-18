@@ -1,24 +1,53 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
 
   // Handle scroll effect
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', () => {
+  useEffect(() => {
+    const handleScroll = () => {
       setScrolled(window.scrollY > 50)
-    })
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const handleSmoothScroll = (id) => {
+    setIsOpen(false)
+    
+    // If not on home page, navigate home first
+    if (location.pathname !== '/') {
+      window.location.href = `/#${id}`
+      return
+    }
+
+    // Scroll to element
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About Me', href: '/#about' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Contact Me', href: '/#contact' },
+    { name: 'Home', onClick: () => {
+      setIsOpen(false)
+      if (location.pathname !== '/') {
+        window.location.href = '/'
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
+    }},
+    { name: 'About Me', onClick: () => handleSmoothScroll('about') },
+    { name: 'Projects', onClick: () => {
+      setIsOpen(false)
+      window.location.href = '/projects'
+    }},
+    { name: 'Contact Me', onClick: () => handleSmoothScroll('contact') },
   ]
 
   const navVariants = {
@@ -72,16 +101,16 @@ export default function Navbar() {
               animate="visible"
               variants={linkVariants}
             >
-              <Link
-                to={item.href}
-                className="text-cinematic-light hover:text-cinematic-accent transition-colors relative group"
+              <button
+                onClick={item.onClick}
+                className="text-cinematic-light hover:text-cinematic-accent transition-colors relative group bg-transparent border-0 cursor-pointer font-inherit"
               >
                 {item.name}
                 <motion.span
                   className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cinematic-accent to-cinematic-light group-hover:w-full"
                   transition={{ duration: 0.3 }}
                 />
-              </Link>
+              </button>
             </motion.div>
           ))}
         </div>
@@ -112,13 +141,12 @@ export default function Navbar() {
               animate={isOpen ? 'visible' : 'hidden'}
               variants={linkVariants}
             >
-              <Link
-                to={item.href}
-                onClick={() => setIsOpen(false)}
-                className="text-cinematic-light hover:text-cinematic-accent transition-colors block"
+              <button
+                onClick={item.onClick}
+                className="text-cinematic-light hover:text-cinematic-accent transition-colors block w-full text-left bg-transparent border-0 cursor-pointer font-inherit"
               >
                 {item.name}
-              </Link>
+              </button>
             </motion.div>
           ))}
         </div>

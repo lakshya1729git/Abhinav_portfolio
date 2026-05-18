@@ -49,6 +49,30 @@ body {
   box-shadow: 0 0 30px rgba(109, 182, 217, 0.5);
 }
 
+/* Enhanced navbar glow on hover */
+nav button:hover {
+  text-shadow: 0 0 10px rgba(109, 182, 217, 0.4);
+}
+
+/* Smooth section transitions */
+section {
+  transition: all 0.3s ease-out;
+}
+
+/* Premium typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+/* Cinematic text gradients */
+.text-gradient {
+  background: linear-gradient(135deg, #6DB6D9 0%, #BCE6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Smooth transitions */
 button, a {
   transition: all 0.3s ease;
