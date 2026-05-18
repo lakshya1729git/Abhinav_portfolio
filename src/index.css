@@ -37,7 +37,83 @@ body {
   background: #BCE6FF;
 }
 
-/* Glassmorphism effect */
+/* Premium Navbar Glassmorphism */
+
+/* Glass background layer - creates the frosted glass effect */
+.navbar-glass-background {
+  background: linear-gradient(
+    180deg,
+    rgba(6, 20, 31, 0.45) 0%,
+    rgba(10, 31, 46, 0.35) 100%
+  );
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(109, 182, 217, 0.15);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 8px 32px rgba(6, 20, 31, 0.3),
+    0 0 20px rgba(109, 182, 217, 0.08);
+}
+
+/* Navbar at top - subtle glass */
+.navbar-glass-top {
+  background: linear-gradient(
+    180deg,
+    rgba(6, 20, 31, 0.25) 0%,
+    rgba(10, 31, 46, 0.15) 100%
+  );
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border-bottom: 1px solid rgba(109, 182, 217, 0.08);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 4px 16px rgba(6, 20, 31, 0.15);
+}
+
+/* Navbar when scrolled - enhanced glass */
+.navbar-glass-scrolled {
+  background: linear-gradient(
+    180deg,
+    rgba(6, 20, 31, 0.55) 0%,
+    rgba(10, 31, 46, 0.45) 100%
+  );
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  border-bottom: 1px solid rgba(109, 182, 217, 0.2);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 12px 40px rgba(6, 20, 31, 0.4),
+    0 0 30px rgba(109, 182, 217, 0.12);
+}
+
+/* Mobile glass effect */
+.navbar-glass-mobile {
+  background: linear-gradient(
+    180deg,
+    rgba(10, 31, 46, 0.5) 0%,
+    rgba(6, 20, 31, 0.4) 100%
+  );
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(109, 182, 217, 0.15);
+  border-top: none;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 8px 32px rgba(6, 20, 31, 0.3);
+}
+
+/* Enhanced navbar link animations */
+nav button {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Smooth transitions */
+nav {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glow effect class */
 .glass-effect {
   background: rgba(10, 31, 46, 0.8);
   backdrop-filter: blur(10px);
@@ -51,7 +127,7 @@ body {
 
 /* Enhanced navbar glow on hover */
 nav button:hover {
-  text-shadow: 0 0 10px rgba(109, 182, 217, 0.4);
+  text-shadow: 0 0 15px rgba(109, 182, 217, 0.5);
 }
 
 /* Smooth section transitions */
@@ -73,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
   background-clip: text;
 }
 
-/* Smooth transitions */
+/* Smooth transitions for all interactive elements */
 button, a {
   transition: all 0.3s ease;
 }

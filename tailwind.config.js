@@ -21,10 +21,14 @@ export default {
       },
       backdropFilter: {
         'glass': 'blur(10px)',
+        'glass-lg': 'blur(20px)',
+        'glass-xl': 'blur(25px)',
       },
       boxShadow: {
         'glow': '0 0 30px rgba(109, 182, 217, 0.5)',
         'glow-sm': '0 0 15px rgba(109, 182, 217, 0.3)',
+        'glow-lg': '0 0 50px rgba(109, 182, 217, 0.4)',
+        'glow-inner': 'inset 0 1px 0 rgba(255, 255, 255, 0.1)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
