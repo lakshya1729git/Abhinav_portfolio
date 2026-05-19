@@ -9,7 +9,7 @@ export default function Projects() {
       title: 'Cinematic Intro',
       category: 'Motion Graphics',
       type: 'video',
-      src: '/videos/Hero.mp4',
+      src: '/videos/Mustang.mp4',
       size: 'large',
     },
     {
@@ -20,10 +20,10 @@ export default function Projects() {
       size: 'small',
     },
     {
-      title: 'Luxury Water Reveal',
+      title: 'Murcedes Exhibition',
       category: 'Product Motion',
       type: 'video',
-      src: '/videos/Hero1.mp4',
+      src: '/videos/mursedes_stills.mp4',
       size: 'medium',
     },
     {

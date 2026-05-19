@@ -32,11 +32,27 @@ export default function Footer() {
   ]
 
   const socialLinks = [
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com', color: 'hover:text-cinematic-accent' },
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com', color: 'hover:text-cinematic-accent' },
-    { name: 'Email', icon: Mail, href: 'mailto:cgabhinav19@gmail.com', color: 'hover:text-cinematic-accent' },
-    { name: 'GitHub', icon: Github, href: 'https://github.com', color: 'hover:text-cinematic-accent' },
-  ]
+  {
+    name: 'LinkedIn',
+    icon: Linkedin,
+    href: 'https://www.linkedin.com/in/abhinav-sharma-2033ba344',
+    color: 'hover:text-cinematic-accent'
+  },
+
+  {
+    name: 'Instagram',
+    icon: Instagram,
+    href: 'https://instagram.com/abhi._3d',
+    color: 'hover:text-cinematic-accent'
+  },
+
+  {
+    name: 'Email',
+    icon: Mail,
+    href: 'mailto:cgabhinav19@gmail.com',
+    color: 'hover:text-cinematic-accent'
+  },
+]
 
   return (
     <footer className="relative w-full bg-gradient-to-b from-cinematic-900 to-cinematic-800 border-t border-cinematic-accent/20">
