@@ -49,7 +49,7 @@ export default function Footer() {
   {
     name: 'Email',
     icon: Mail,
-    href: 'mailto:cgabhinav19@gmail.com',
+    href: 'mailto:abhinavsrsharma@gmail.com',
     color: 'hover:text-cinematic-accent'
   },
 ]

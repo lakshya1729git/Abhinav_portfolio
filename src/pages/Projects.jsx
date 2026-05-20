@@ -48,18 +48,18 @@ export default function Projects() {
       size: 'medium',
     },
     {
+      title: 'Westside Motion Visual',
+      category: 'Branding',
+      type: 'video',
+      src: '/videos/Westside_interior.mp4',
+      size: 'medium',
+    },
+    {
       title: 'Room Infrastructure Design',
       category: '3D Design',
       type: 'image',
       src: '/images/Room_infra.png',
       size: 'small',
-    },
-    {
-      title: 'Eyewear Product Showcase',
-      category: 'Product Motion',
-      type: 'video',
-      src: '/videos/lenses.mp4',
-      size: 'medium',
     },
     {
       title: 'Defender Automotive Render',
@@ -69,12 +69,21 @@ export default function Projects() {
       size: 'small',
     },
     {
+      title: 'Eyewear Product Showcase',
+      category: 'Product Motion',
+      type: 'video',
+      src: '/videos/lenses.mp4',
+      size: 'medium',
+    },
+    
+    {
       title: 'Mercedes Cinematic Render',
       category: 'Automotive Viz',
       type: 'video',
       src: '/videos/mursedes_stills.mp4',
       size: 'small',
     },
+  
     {
       title: 'Interior Mood Design',
       category: 'Design Concept',
@@ -154,7 +163,7 @@ export default function Projects() {
           className="flex justify-center mt-20 md:mt-32"
         >
           <motion.a
-            href="https://instagram.com"
+            href="https://www.instagram.com/abhi._3d/"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05, y: -4 }}
